@@ -11,6 +11,9 @@ public class DataManager : MonoBehaviour {
     public Sprite[] sprites;
     public Sprite defaultImg;
 
+    /* 조합 레시피 리스트 */
+    private List<Dictionary<string, object>> recipeList;
+
     public GameObject[] children;
 
     public static DataManager dataManager
@@ -41,9 +44,10 @@ public class DataManager : MonoBehaviour {
     {
         /* 오브젝트 아이템 리스트 로드 */
         itemList = CSVReader.Read("Data/itemList");
+        recipeList = CSVReader.Read("Data/RecipeList");
         items = new List<Item>();
 
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < itemList.Count; i++)
         {
             Item item = new Item();
             item.name = itemList[i]["name"].ToString();
@@ -62,6 +66,38 @@ public class DataManager : MonoBehaviour {
     public List<Item> GetItems() // 아이템 리스트 리턴
     {
         return items;
+    }
+
+    public Item GetItem(string id)
+    {
+        for (int i = 0; i < items.Count; i++)
+        {
+            if (items[i].ID == id)
+            {
+                return items[i];
+            }
+        }
+
+        return null;
+
+    }
+
+    public List<Dictionary<string, object>> GetRecipe()
+    {
+        return recipeList;
+    }
+
+    public string getName(string id)
+    {
+        for (int i = 0; i < itemList.Count; i++)
+        {
+            if (itemList[i]["ID"].ToString() == id)
+            {
+                return System.Convert.ToString(itemList[i]["name"].ToString());
+            }
+        }
+
+        return "";
     }
 
     public int isGot(string id) // 아이템 분석 혹은 사용한 적 있는지 확인
@@ -89,11 +125,11 @@ public class DataManager : MonoBehaviour {
         }
     }
 
-    public Sprite findSprite(string name) // 아이템 ID에 해당하는 스프라이트 리턴
+    public Sprite findSprite(string id) // 아이템 ID에 해당하는 스프라이트 리턴
     {
         foreach (Sprite spr in sprites)
         {
-            if (spr.name == name)
+            if (spr.name == id)
             {
                 return spr;
             }

@@ -1,13 +1,14 @@
 <Child>
   <Item name="독초" ID="b_hurb" des="" tool="0" effect="체력 -50" slotNum="0" type="food" />
   <Item name="독초" ID="b_hurb" des="" tool="0" effect="체력 -50" slotNum="1" type="food" />
-  <Item name="송이버섯" ID="song2_m" des="" tool="0" effect="포만감 +2" slotNum="2" type="food" />
-  <Item name="약초" ID="g_hurb" des="" tool="0" effect="체력 +50" slotNum="3" type="food" />
+  <Item name="약초" ID="g_hurb" des="" tool="0" effect="체력 +50" slotNum="2" type="food" />
+  <Item name="독초" ID="b_hurb" des="" tool="0" effect="체력 -50" slotNum="3" type="food" />
   <Item name="독초" ID="b_hurb" des="" tool="0" effect="체력 -50" slotNum="4" type="food" />
-  <Item name="독초" ID="b_hurb" des="" tool="0" effect="체력 -50" slotNum="5" type="food" />
-  <Item name="약초" ID="g_hurb" des="" tool="0" effect="체력 +50" slotNum="6" type="food" />
-  <Item name="독초" ID="b_hurb" des="" tool="0" effect="체력 -50" slotNum="7" type="food" />
-  <Item name="약초" ID="g_hurb" des="" tool="0" effect="체력 +50" slotNum="8" type="food" />
-  <Item name="약초" ID="g_hurb" des="" tool="0" effect="체력 +50" slotNum="9" type="food" />
+  <Item name="독초" ID="b_hurb" des="" tool="0" effect="체력 -50" slotNum="6" type="food" />
   <Item name="독초" ID="b_hurb" des="" tool="0" effect="체력 -50" slotNum="12" type="food" />
+  <Item name="약초" ID="g_hurb" des="" tool="0" effect="체력 +50" slotNum="13" type="food" />
+  <Item name="약초" ID="g_hurb" des="" tool="0" effect="체력 +50" slotNum="14" type="food" />
+  <Item name="약초" ID="g_hurb" des="" tool="0" effect="체력 +50" slotNum="15" type="food" />
+  <Item name="송이버섯" ID="song2_m" des="" tool="0" effect="포만감 +2" slotNum="16" type="food" />
+  <Item name="송이버섯" ID="song2_m" des="" tool="0" effect="포만감 +2" slotNum="17" type="food" />
 </Child>

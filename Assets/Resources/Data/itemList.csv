@@ -1,7 +1,8 @@
-﻿name,ID,effect,tool,isGot,hp,full,type
-약초,g_hurb,체력 +50,0,0,50,0,food
-독초,b_hurb,체력 -50,0,0,-50,0,food
-송이버섯,song2_m,포만감 +2,0,0,0,2,food
-광대버섯,crown_m,체력 -50,0,0,-50,0,food
-나뭇가지,branch,사용 불가,0,0,0,0,material
-토끼 고기,rabbit,포만감 +2,새총,0,0,2,food
+﻿name,ID,effect,tool,isGot,hp,full,scare,type
+약초,g_hurb,체력 +50,0,0,50,0,0,food
+독초,b_hurb,체력 -50,0,0,-50,0,0,food
+송이버섯,song2_m,포만감 +2,0,0,0,2,0,food
+광대버섯,crown_m,체력 -50,0,0,-50,0,0,food
+나뭇가지,branch,사용 불가,0,0,0,0,0,material
+토끼 고기,rabbit,포만감 +2,새총,0,0,2,0,food
+버섯 수프,mushroom_soup,허기 50 회복,0,0,0,50,0,food

@@ -72,7 +72,7 @@ public class Inventory : MonoBehaviour {
 
         if (DataManager.dataManager.isGot(item.ID) == 0) // 처음 줍거나 써본 적 없을 때
         {
-            checkBtn.enabled = true; // 체크 버튼 사용 가능
+            checkBtn.interactable = true; // 체크 버튼 사용 가능
 
             /* 설명 슬롯 설정 */
             InfoSlot.GetChild(0).GetComponent<Text>().text = "???";
@@ -93,7 +93,7 @@ public class Inventory : MonoBehaviour {
         }
         else // 조사했거나 사용해 봤을 때
         {
-            checkBtn.enabled = false; // 조사 버튼 사용 불가능
+            checkBtn.interactable = false; // 조사 버튼 사용 불가능
 
             /* 설명 슬롯 설정 */
             InfoSlot.GetChild(0).GetComponent<Text>().text = item.name;
@@ -238,5 +238,19 @@ public class Inventory : MonoBehaviour {
                 }
             }
         }
-    } 
+    }
+
+    public int getItemCount(string id, int num)
+    {
+        int count = 0;
+
+        for (int i = 6 * num; i < 6 * (num + 1) ; i++)
+        {
+            if (!slots[i].GetComponent<Slot>().isSlots())
+                break;
+            if (slots[i].GetComponent<Slot>().item.ID == id)
+                count++;
+        }
+        return count;
+    }
 }

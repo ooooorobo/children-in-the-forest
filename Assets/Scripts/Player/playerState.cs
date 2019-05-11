@@ -7,6 +7,7 @@ public class playerState : MonoBehaviour
     public float hp = 100;              // 체력
     public float full = 10;             // 포만감
     public float scare = 10;            // 공포
+    public int insight;                 // 통찰력
 
     private bool isSelected = false;    // 현재 선택되었는가 여부
     public bool IsSelected() { return isSelected; }
